@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/oathanrex/font-awesome-pro@main/fontawesome-pro-6.5.2-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Токранова</title>
+  </head>
+
+  <body>
+    <div id="Modal" class="modal">
+      <div class="modal-content">
+        <span class="close"><i class="fa-solid fa-xmark"></i></span>
+        <div class="tabs">
+          <div class="content">
+            <h1>Авторизация</h1>
+            <div class="flex border-b border-gray-300">
+              <button class="first_tab" onclick="showTab(0)">
+                Авторизация
+              </button>
+              <button class="second_tab" onclick="showTab(1)">
+                Регистрация
+              </button>
+            </div>
+            <div class="p-4" id="tab-content-1">
+              <div class="form-elements">
+                <form class="form">
+                  <div class="form-group">
+                    <label for="text">E-mail</label>
+                    <input
+                      type="email"
+                      name=""
+                      id="a_email"
+                      placeholder="arimovrenat@gmail.com"
+                    />
+                  </div>
+                  <label for="text">Номер телефона</label>
+                  <div class="input_phone">
+                    <div class="regionn">
+                      <input type="text" name="" id="region" placeholder="+7" />
+                    </div>
+                    <div class="nomer"><input
+                      type="text"
+                      name=""
+                      id="qwerty"
+                      placeholder="__ __-_-_"
+                    /></div>
+                  </div>
+                  <button type="submit" class="vhod">Войти</button>
+                  <div class="ili"> или </div>
+                  <div class="socials">
+                    <img src="./img/Icons social media.png" alt="" />
+                    <img src="./img/bbc.png" alt="" />
+                    <img src="./img/ghjgh.png" alt="" />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 hidden" id="tab-content-2">
+          <p>Content for Tab 2</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      function showTab(index) {
+        const contents = document.querySelectorAll('[id^="tab-content-"]');
+
+        contents.forEach((content, i) => {
+          content.classList.toggle("hidden", i !== index);
+        });
+      }
+    </script>
+  </body>
+</html>
